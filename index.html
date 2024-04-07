@@ -1,27 +1,26 @@
-function setup() {
-  noCanvas();
-
-  // Creating buttons
-  createButton('Claim Summary Overview')
-    .mousePressed(() => loadIframe('ClaimSummary_Overview.html'));
-  createButton('FNOL Step 1: Search or Create Policy')
-    .mousePressed(() => loadIframe('FNOL_Step1_SearchOrCreatePolicy.html'));
-  createButton('FNOL Step 2: Basic Info')
-    .mousePressed(() => loadIframe('FNOL_Step2_BasicInfo.html'));
-
-  // Creating iframe initially with the first page
-  this.iframe = createIframe('ClaimSummary_Overview.html');
-  this.iframe.style('width', '100%').style('height', '500px'); // Adjust size as needed
-}
-
-function loadIframe(src) {
-  this.iframe.attribute('src', src);
-}
-
-function createIframe(src) {
-  // Correcting element creation
-  const iframe = createElement('iframe');
-  iframe.attribute('src', src);
-  iframe.style('width', '100%').style('height', '500px'); // Adjust iframe size here
-  return iframe;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Iframe with p5.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="script.js"></script> <!-- Ensure this path points to your p5.js script -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        iframe {
+            width: 60%;
+            height: 70%;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
